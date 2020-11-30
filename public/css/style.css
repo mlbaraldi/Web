@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "Roboto", sans-serif;
+	font-size: 10px;
+}
+
+.container {
+	width: 100%;
+	max-width: 120rem;
+	margin: 0 auto;
+	padding: 0 1.5rem;
+}
