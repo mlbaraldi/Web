@@ -7,6 +7,7 @@
 			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
 		/>
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<link rel="shortcut icon" type="image/x-icon" href="./image/favicon.ico" />
 		<title>Easy-Fit</title>
 
 		<!-- css call -->
@@ -14,10 +15,11 @@
 		<link rel="stylesheet" href="./css/header.css" />
 		<link rel="stylesheet" href="./css/main.css" />
 		<link rel="stylesheet" href="./css/planos.css" />
+		<link rel="stylesheet" href="./css/contato.css" />
 		<link rel="stylesheet" href="./css/footer.css" />
 	</head>
 	<body>
-		<!-- navegation not responsive-->
+		<!-- navegation-->
 		<header>
 			<div class="container">
 				<nav class="nav">
@@ -33,7 +35,7 @@
 							<a href="#Planos" class="nav-link">Planos</a>
 						</li>
 						<li>
-							<a href="#" class="nav-link">Contato</a>
+							<a href="#contato" class="nav-link">Contato</a>
 						</li>
 					</ul>
 					<a href="#" id="nav-btn">Cadastro</a>
@@ -111,6 +113,30 @@
 			</div>
 		</section>
 
+		<section class="sessao-contato" id="contato">
+			<div class="contato-wrapper">
+				<div class="contato-left"></div>
+				<div class="contato-right">
+					<h1>Contato</h1>
+					<form>
+						<div class="input-group">
+							<input type="text" class="field" id="nome" />
+							<label for="nome" class="field-label">Nome</label>
+						</div>
+						<div class="input-group">
+							<input type="text" class="field" id="email" />
+							<label for="email" class="field-label">E-mail</label>
+						</div>
+						<div class="input-group">
+							<textarea class="field" id="mensagem"></textarea>
+							<label for="mensagem" class="field-label">Mensagem</label>
+						</div>
+						<button type="submit" class="btn btn-submit">Enviar</button>
+					</form>
+				</div>
+			</div>
+		</section>
+
 		<footer>
 			<div class="footer-content">
 				<p>Copyright &copy; 2020, ETECIA DS - Todos os diretos reservados</p>
@@ -132,6 +158,7 @@
 		<a href="#" id="link-topo">
 			<i class="fas fa-arrow-up"></i>
 		</a>
+		<!-- Javacript -->
 		<script src="../src/header.js"></script>
 	</body>
 </html>

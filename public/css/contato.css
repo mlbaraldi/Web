@@ -1,0 +1,101 @@
+.sessao-contato {
+	width: 100%;
+	height: 100vh;
+	background-color: #272727;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.contato-wrapper {
+	width: 75%;
+	height: 55rem;
+	display: flex;
+	box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+}
+
+.contato-left {
+	width: 35%;
+	background: linear-gradient(rgba(15, 15, 15, 0.6), rgba(22, 22, 22, 0.9)),
+		url(../image/1.jpg);
+	background-size: cover;
+}
+
+.contato-right {
+	width: 65%;
+	background-color: #eee;
+	padding: 1rem 3rem 3rem 3rem;
+}
+
+.sessao-contato h1 {
+	width: 100%;
+	text-align: center;
+	font-family: var(--primary);
+	color: #000000;
+	font-size: 5rem;
+	font-weight: lighter;
+}
+
+.sessao-contato form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.input-group {
+	position: relative;
+}
+
+.field {
+	background: transparent;
+	border: none;
+	width: 40rem;
+	font-size: 2.3rem;
+	font-family: var(--secundary);
+	border-bottom: 2px dashed #636363;
+	height: 5rem;
+	outline: none;
+	margin: 1rem 0;
+}
+
+.input-group textarea {
+	padding-top: 2rem;
+	max-width: 40rem;
+	max-height: 20rem;
+}
+
+.field-label {
+	position: absolute;
+	left: 0;
+	top: 0.5rem;
+	font-size: 1.5rem;
+	font-family: var(--secundary);
+	text-transform: uppercase;
+	transition: all 0.3s;
+}
+
+.field:focus ~ label {
+	top: 2;
+	font-size: 0.7rem;
+}
+
+.field:focus {
+	border-bottom: 1px solid;
+}
+
+.btn-submit {
+	font-size: 1.9rem;
+	text-transform: uppercase;
+	width: 40%;
+	height: 4.5rem;
+	margin-top: 2rem;
+	letter-spacing: 0.2rem;
+	cursor: pointer;
+	text-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+	box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.3);
+}
+
+.preenchido {
+	pointer-events: none;
+}
