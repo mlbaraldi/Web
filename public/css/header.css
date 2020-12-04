@@ -25,6 +25,9 @@ header {
 }
 
 .nav .logo {
+	box-shadow: 4px 1px 0px 1px rgba(255, 255, 255, 0.14);
+	border-radius: 72px;
+	background-color: #ffffff13;
 	font-size: 3.5rem;
 	font-weight: bold;
 }
@@ -37,6 +40,8 @@ header {
 }
 
 .nav-link {
+	font-family: var(--primary);
+	font-size: 1.3rem;
 	margin: 0 2rem;
 	position: relative;
 }
@@ -59,16 +64,21 @@ header {
 }
 
 #nav-btn {
+	font-family: var(--action);
 	display: inline-block;
 	background-color: #fff;
 	color: #313131;
 	padding: 1rem 2rem;
 	border-radius: 2rem;
-	transition: background-color 0.5s ease;
 }
 
 #nav-btn:hover {
-	background-color: #d3d3d3;
+	background: rgb(14, 255, 217);
+	background: linear-gradient(
+		153deg,
+		rgba(14, 255, 217, 1) 52%,
+		rgba(9, 213, 255, 1) 85%
+	);
 }
 
 /* effect when rolling the mouse*/
@@ -86,8 +96,13 @@ header {
 }
 
 .scrolling-active #nav-btn {
-	background-color: #313131;
-	color: #fff;
+	background: rgb(14, 255, 217);
+	background: linear-gradient(
+		153deg,
+		rgba(14, 255, 217, 1) 52%,
+		rgba(9, 213, 255, 1) 85%
+	);
+	color: rgb(12, 12, 12);
 }
 
 .scrolling-active #nav-btn:hover {
@@ -113,11 +128,28 @@ header {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.138);
 }
-/* main */
-.main-content {
+
+.text {
+	font-family: var(--primary);
 	width: 100%;
-	height: 200vh;
-	background-color: #fff;
+	color: rgb(255, 255, 255);
+	text-shadow: 0.3rem 0.4rem 2px rgba(0, 0, 0, 0.4);
+	position: absolute;
+	text-align: center;
+	font-size: 3rem;
+	font-weight: 200;
+	top: 50%;
+	animation: moveBanner 2s 0.9s forwards;
+}
+
+@keyframes moveBanner {
+	0% {
+		transform: translateY(10rem) rotateY(-30deg);
+	}
+	100% {
+		transform: translateY(0) rotateY(0);
+		opacity: 1;
+	}
 }
