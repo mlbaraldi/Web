@@ -24,6 +24,7 @@
 	border-bottom: solid 3px #ffffff;
 	margin-bottom: 3rem;
 	margin-top: 2rem;
+	text-shadow: 0rem 0rem 1rem rgba(8, 252, 207, 0.871);
 }
 
 .card {
@@ -66,6 +67,7 @@
 	font-size: 4rem;
 	font-weight: 500;
 	color: #eee;
+	text-shadow: 0.2rem 0.5rem rgba(0, 0, 0, 0.871);
 }
 
 .card-info h3 {
@@ -78,7 +80,7 @@
 
 .card-info p {
 	font-family: var(--secundary);
-	font-size: 1.7rem;
+	font-size: 1.9rem;
 	color: #eee;
 	font-weight: 400;
 	width: 80%;
@@ -88,6 +90,7 @@
 .btn {
 	font-family: var(--action);
 	cursor: pointer;
+	font-weight: 600;
 	background: #11f37e;
 	background: -webkit-linear-gradient(to right, #2cf3b7, #00d0ff);
 	background: linear-gradient(to left, #00eeff, #00ffb3);
