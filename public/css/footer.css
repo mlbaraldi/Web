@@ -1,10 +1,12 @@
 footer {
 	width: 100%;
 	height: 6rem;
+	bottom: 0;
 	background-color: #ffffff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: inherit;
 }
 
 .footer-content {
@@ -52,4 +54,26 @@ footer {
 	color: rgb(0, 0, 0);
 	border-radius: 0.3rem;
 	box-shadow: 0 0.1rem 0.6rem #ffffff09;
+}
+@media (max-width: 900px) {
+	footer {
+		height: 7rem;
+	}
+
+	.footer-content {
+		width: 90%;
+	}
+	.footer-content p {
+		font-size: 1rem;
+	}
+	.social-list i {
+		font-size: 2rem;
+	}
+
+	#link-topo {
+		right: 3rem;
+		bottom: 3rem;
+		width: 3rem;
+		height: 3rem;
+	}
 }
