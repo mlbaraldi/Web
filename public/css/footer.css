@@ -20,6 +20,7 @@ footer {
 	font-size: 1.3rem;
 }
 .social-list ul {
+	list-style: none;
 	display: flex;
 }
 
@@ -32,7 +33,7 @@ footer {
 	height: 2.5rem;
 	width: 2.5rem;
 	font-size: 2rem;
-	transition: background-color 1s;
+	transition: color 1s;
 }
 
 .social-list i:hover {
@@ -68,6 +69,9 @@ footer {
 	}
 	.social-list i {
 		font-size: 2rem;
+	}
+	.footer-content p {
+		font-size: 1.4rem;
 	}
 
 	#link-topo {
