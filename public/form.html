@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Cadastro de clientes</h1>
+    
+    <form id="CadastroCliente">
+        
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" name="nome" placeholder="">
+        <br>
+        <br>
+
+        <label for="cidade">Selecione a cidade</label>
+        <select id="cidade" name="cidade" required>
+            <option name="cidade" value=""> </option>
+            <option name="cidade" value="m">Maringá</option>
+            <option name="cidade" value="s">Sarandi</option>
+            <option name="cidade" value="o">Outro</option>
+            <input type="text" name="cidade" id="txtcidade" hidden="true">
+        </select>
+        <br>
+        <br>
+        
+        <label for="genero">Digite seu gênero</label>
+        <select id="genero" name="genero" required>
+            <option value=""></option>
+            <option value="f">Feminino</option>
+            <option value="m">Masculino</option>
+            <option value="o">Outro</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="nascimento">Data de Nascimento:</label>
+        <input type="date" id="nascimento" name="nascimento" placeholder="Selecione data de Nascimento">
+        <br>
+        <br>
+
+        <label for="contato">Digite seu telefone:</label>
+        <input type="text" id="contato" placeholder="(__)_____-____">
+        <br>
+        <br>
+
+        <label for="procura">O que procura na academia?</label>
+        <select id="procura" required>
+            <option value=""> </option>
+            <option value="cf">Condicionamento Físico</option>
+            <option value="es">Estética</option>
+            <option value="em">Emagrecimento</option>
+            <option value="et">Exercícios Terapêuticos</option>
+            <option value="ou">Outros</option>
+        </select>
+        <br>
+        <br>
+
+
+        <label for="saude">Você tem algum desses problemas de saúde?</label>
+        <br>
+        <input type="checkbox" name="saude" id="diabete">Diabetes
+        <input type="checkbox" name="saude" id="pressao">Pressão Alta
+        <input type="checkbox" name="saude" id="diabete">Obesidade
+        <input type="checkbox" name="saude" id="diabete">Fibromialgia
+        <input type="checkbox" name="saude" id="diabete">Asma
+        <input type="checkbox" name="saude" id="diabete">Parkinson
+        <input type="checkbox" name="saude" id="diabete">Lombalgia
+        <input type="checkbox" name="saude" id="diabete">Osteoartrite
+        <input type="checkbox" name="saude" id="diabete">Doença Renal Crônica
+        <input type="checkbox" name="saude" id="diabete">Nenhuma
+        <input type="checkbox" name="saude" id="diabete">Outra
+        <input type="text" name="saude" id="txtcidade" hidden="true">
+    
+
+    </form>  
+</body>
+<script src="cadastro.js"></script>
+</html>
