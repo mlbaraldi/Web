@@ -12,7 +12,7 @@ function calcIMC(peso: number, altura:number) {
 //se usuario digitar , muda para .
 function commaToDot(e: string) {
     if (e.includes(',')) {
-        return parseFloat(e.replace(',', '.'))
+        return e.replace(',', '.')
     }
     return e
 }
