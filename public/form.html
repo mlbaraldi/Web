@@ -18,10 +18,10 @@
         <label for="cidade">Selecione a cidade</label>
         <select id="cidade" name="cidade" required>
             <option name="cidade" value=""> </option>
-            <option name="cidade" value="m">Maringá</option>
-            <option name="cidade" value="s">Sarandi</option>
+            <option name="cidade" value="Maringá">Maringá</option>
+            <option name="cidade" value="Sarandi">Sarandi</option>
             <option name="cidade" value="o">Outro</option>
-            <input type="text" name="cidade" id="txtcidade" hidden="true">
+            <input type="text" name="cidade" id="txtcidade" placeholder="Digite aqui o nome da cidade" hidden="true">
         </select>
         <br>
         <br>
@@ -29,9 +29,9 @@
         <label for="genero">Digite seu gênero</label>
         <select id="genero" name="genero" required>
             <option value=""></option>
-            <option value="f">Feminino</option>
-            <option value="m">Masculino</option>
-            <option value="o">Outro</option>
+            <option value="Feminino">Feminino</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Outro">Outro</option>
         </select>
         <br>
         <br>
@@ -49,10 +49,10 @@
         <label for="procura">O que procura na academia?</label>
         <select id="procura" required>
             <option value=""> </option>
-            <option value="cf">Condicionamento Físico</option>
-            <option value="es">Estética</option>
-            <option value="em">Emagrecimento</option>
-            <option value="et">Exercícios Terapêuticos</option>
+            <option value="Condicionamento Físico">Condicionamento Físico</option>
+            <option value="Estética">Estética</option>
+            <option value="Emagrecimento">Emagrecimento</option>
+            <option value="Exercícios Terapêuticos">Exercícios Terapêuticos</option>
             <option value="ou">Outros</option>
         </select>
         <br>
@@ -70,12 +70,15 @@
         <input type="checkbox" name="saude" id="lombalgia">Lombalgia
         <input type="checkbox" name="saude" id="osteoartrite">Osteoartrite
         <input type="checkbox" name="saude" id="drc">Doença Renal Crônica
-        <input type="checkbox" name="saude" id="nenhuma">Nenhuma
-        <input type="checkbox" name="saude" id="outra">Outra
-        <input type="text" name="saude" id="txtcidade" hidden="true">
+        <input type="checkbox" id="nenhuma">Nenhuma
+        <input type="checkbox" name="saude" id="saudeoutra">Outra
+        <input type="text" name="saude" id="txtsaude" placeholder="Digite aqui" hidden="true">
+
+        <br>
+        <button>Registrar Cadastro</button>
     
 
     </form>  
 </body>
-<script src="cadastro.js"></script>
+<script type="module" src="cadastro.js"></script>
 </html>
