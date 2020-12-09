@@ -8,19 +8,11 @@ const genero = document.querySelector<HTMLSelectElement>('#genero')!
 const nascimento = document.querySelector<HTMLInputElement>('#nascimento')!
 const contato = document.querySelector<HTMLInputElement>('#contato')!
 const procura = document.querySelector<HTMLSelectElement>('#procura')!
-const saudeDiabete = document.querySelector<HTMLInputElement>('#diabete')!
-const saudePressao = document.querySelector<HTMLInputElement>('#pressao')!
-const saudeObesidade = document.querySelector<HTMLInputElement>('#obesidade')!
-const saudeFibro = document.querySelector<HTMLInputElement>('#fibromialgia')!
-const saudeAsma = document.querySelector<HTMLInputElement>('#asma')!
-const saudeParkinson = document.querySelector<HTMLInputElement>('#parkinson')!
-const saudeLombalgia = document.querySelector<HTMLInputElement>('#lombalgia')!
-const saudeOsteo = document.querySelector<HTMLInputElement>('#osteoartrite')!
-const saudeDrc = document.querySelector<HTMLInputElement>('#drc')!
 const saudeNenhuma = document.querySelector<HTMLInputElement>('#nenhuma')!
 const saudeOutra = document.querySelector<HTMLInputElement>('#saudeoutra')!
 const txtSaude = document.querySelector<HTMLInputElement>('#txtsaude')!
-const checkboxesSaude = document.getElementsByName('saude')
+const checkboxesSaude = document.getElementsByName('saude')!
+const retorno = document.querySelector<HTMLParagraphElement>('#retorno')!
 
 const Pessoas: Pessoa[] = []
 
@@ -48,6 +40,8 @@ saudeNenhuma.addEventListener('change', (e: Event) => {
         for (let checkbox of checkboxesSaude) {
             checkbox.checked = false;
         }
+        saudeOutra.checked = false;
+        txtSaude.hidden = true;
     }
 })
 
@@ -66,20 +60,26 @@ cadastroCliente.addEventListener('submit', (e: Event) => {
     let generoValor = genero.value
     let contatoValor= contato.value
     let procuraValor = procura.value
+    
+    //preenchimento de comorbidades de saude
     let saudeValor = []
     for (let checkbox of checkboxesSaude) {
-        if ((checkbox.checked) && checkbox.value == 'saudeOutra') {
-            saudeValor.push(checkbox.value)
+        if (checkbox.checked) {
+            saudeValor.push(checkbox.id)
         }
     }
+    if (saudeOutra.checked) {
+        saudeValor.push(txtSaude.value)
+    }
 
-        
-    
-
-//    let pessoa = new Pessoa(nomeValor, cidadeValor, generoValor, data, contato.value, procura.value, [])
+    let pessoa = new Pessoa(nomeValor, cidadeValor, generoValor, data, contatoValor, procuraValor, saudeValor)
+    Pessoas.push(pessoa)
+    console.log(Pessoas)
+    retorno.innerText="Cadastro Efetuado com Sucesso!"
 
 })
 
-    // for (let option in procura.options) {
-    //     if (option.checked) {
-    //         procuraValor.push(option.innerText)
+//TODO
+// MANDAR PARA LOCAL STORAGE E APARECER PARAGRAPH COM NOME DO USUÁRIO CADASTRADO
+// VALIDAÇÕES
+// FORMATAR SAUDE OUTROS E TELEFONE

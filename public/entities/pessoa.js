@@ -6,7 +6,7 @@ export class Pessoa {
         this.nascimento = nascimento;
         this.contato = contato;
         this.procura = procura;
-        this.saude = saude;
+        this.ProblemasSaude = saude;
     }
 }
 export default Pessoa;

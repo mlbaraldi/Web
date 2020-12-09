@@ -1,3 +1,4 @@
+import Pessoa from "./entities/pessoa.js";
 const cadastroCliente = document.querySelector('#CadastroCliente');
 const nome = document.querySelector('#nome');
 const cidade = document.querySelector('#cidade');
@@ -6,19 +7,11 @@ const genero = document.querySelector('#genero');
 const nascimento = document.querySelector('#nascimento');
 const contato = document.querySelector('#contato');
 const procura = document.querySelector('#procura');
-const saudeDiabete = document.querySelector('#diabete');
-const saudePressao = document.querySelector('#pressao');
-const saudeObesidade = document.querySelector('#obesidade');
-const saudeFibro = document.querySelector('#fibromialgia');
-const saudeAsma = document.querySelector('#asma');
-const saudeParkinson = document.querySelector('#parkinson');
-const saudeLombalgia = document.querySelector('#lombalgia');
-const saudeOsteo = document.querySelector('#osteoartrite');
-const saudeDrc = document.querySelector('#drc');
 const saudeNenhuma = document.querySelector('#nenhuma');
 const saudeOutra = document.querySelector('#saudeoutra');
 const txtSaude = document.querySelector('#txtsaude');
 const checkboxesSaude = document.getElementsByName('saude');
+const retorno = document.querySelector('#retorno');
 const Pessoas = [];
 //aparecer caixa de texto em Outra cidade
 cidade.addEventListener('change', (e) => {
@@ -44,6 +37,8 @@ saudeNenhuma.addEventListener('change', (e) => {
         for (let checkbox of checkboxesSaude) {
             checkbox.checked = false;
         }
+        saudeOutra.checked = false;
+        txtSaude.hidden = true;
     }
 });
 cadastroCliente.addEventListener('submit', (e) => {
@@ -60,15 +55,22 @@ cadastroCliente.addEventListener('submit', (e) => {
     let generoValor = genero.value;
     let contatoValor = contato.value;
     let procuraValor = procura.value;
+    //preenchimento de comorbidades de saude
     let saudeValor = [];
     for (let checkbox of checkboxesSaude) {
-        if ((checkbox.checked) && checkbox.value == 'saudeOutra') {
-            saudeValor.push(checkbox.value);
+        if (checkbox.checked) {
+            saudeValor.push(checkbox.id);
         }
     }
-    //    let pessoa = new Pessoa(nomeValor, cidadeValor, generoValor, data, contato.value, procura.value, [])
+    if (saudeOutra.checked) {
+        saudeValor.push(txtSaude.value);
+    }
+    let pessoa = new Pessoa(nomeValor, cidadeValor, generoValor, data, contatoValor, procuraValor, saudeValor);
+    Pessoas.push(pessoa);
+    console.log(Pessoas);
+    retorno.innerText = "Cadastro Efetuado com Sucesso!";
 });
-export {};
-// for (let option in procura.options) {
-//     if (option.checked) {
-//         procuraValor.push(option.innerText)
+//TODO
+// MANDAR PARA LOCAL STORAGE E APARECER PARAGRAPH COM NOME DO USUÁRIO CADASTRADO
+// VALIDAÇÕES
+// FORMATAR SAUDE OUTROS E TELEFONE
