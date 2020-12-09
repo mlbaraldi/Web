@@ -13,6 +13,8 @@ const txtSaude = document.querySelector('#txtsaude');
 const checkboxesSaude = document.getElementsByName('saude');
 const retorno = document.querySelector('#retorno');
 const Pessoas = [];
+nome.focus();
+cadastroCliente.reset();
 //aparecer caixa de texto em Outra cidade
 cidade.addEventListener('change', (e) => {
     if (cidade.value == 'o') {
@@ -43,7 +45,14 @@ saudeNenhuma.addEventListener('change', (e) => {
 });
 cadastroCliente.addEventListener('submit', (e) => {
     e.preventDefault();
+    //validação nome
+    const regName = /^[a-zA-Z]/;
+    if (!regName.test(nome.value) || nome.value.split(' ').length < 2) {
+        retorno.innerText = `Campo nome preenchido incorretamente. Por favor digite seu nome completo.`;
+        return;
+    }
     let nomeValor = nome.value;
+    //validação e preenchimento campo Cidade
     let cidadeValor;
     if (cidade.value == "o") {
         cidadeValor = txtcidade.value;
@@ -51,10 +60,22 @@ cadastroCliente.addEventListener('submit', (e) => {
     else {
         cidadeValor = cidade.value;
     }
+    const regOnlyLetter = /[^0-9]/g;
+    if (!regOnlyLetter.test(cidadeValor)) {
+        retorno.innerText = 'Campo Cidade preenchido incorretamente. Por favor utilize apenas letras.';
+        return;
+    }
+    //data string para Date Object
     let data = new Date(nascimento.value);
+    //criação de variáveis para valores de gênero e o que procuram
     let generoValor = genero.value;
-    let contatoValor = contato.value;
     let procuraValor = procura.value;
+    //formata contato para ignorar hifens, pontos e parenteses, valida numero com 11 dígitos (DDD)
+    let contatoValor = contato.value.replace(regOnlyLetter, "");
+    if (!(contatoValor.length == 11)) {
+        retorno.innerText = 'Campo contato preenchido incorretamente. Digite o número de celular com DDD (11 dígitos)';
+        return;
+    }
     //preenchimento de comorbidades de saude
     let saudeValor = [];
     for (let checkbox of checkboxesSaude) {
@@ -63,14 +84,22 @@ cadastroCliente.addEventListener('submit', (e) => {
         }
     }
     if (saudeOutra.checked) {
-        saudeValor.push(txtSaude.value);
+        let regexcomma = /,/gi;
+        let novoSaude = txtSaude.value.trim().replace(regexcomma, '').split(' ');
+        for (let i = 0; i < novoSaude.length; i++) {
+            saudeValor.push(novoSaude[i]);
+        }
     }
-    let pessoa = new Pessoa(nomeValor, cidadeValor, generoValor, data, contatoValor, procuraValor, saudeValor);
-    Pessoas.push(pessoa);
-    console.log(Pessoas);
-    retorno.innerText = "Cadastro Efetuado com Sucesso!";
+    //instanciação e serialização do cadastro no localStorage
+    try {
+        let pessoa = new Pessoa(nomeValor, cidadeValor, generoValor, data, contatoValor, procuraValor, saudeValor);
+        Pessoas.push(pessoa);
+        console.log(Pessoas);
+        retorno.innerText = `Cadastro Efetuado com Sucesso! Bem vindo ${pessoa.name}!`;
+        localStorage.setItem("Pessoas Cadastradas", JSON.stringify(Pessoas));
+    }
+    catch (error) {
+        console.error(error);
+        retorno.innerText = "\n Aconteceu algum erro ao registrar usuário";
+    }
 });
-//TODO
-// MANDAR PARA LOCAL STORAGE E APARECER PARAGRAPH COM NOME DO USUÁRIO CADASTRADO
-// VALIDAÇÕES
-// FORMATAR SAUDE OUTROS E TELEFONE

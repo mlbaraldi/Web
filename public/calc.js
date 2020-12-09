@@ -11,7 +11,7 @@ function calcIMC(peso, altura) {
 //se usuario digitar , muda para .
 function commaToDot(e) {
     if (e.includes(',')) {
-        return parseFloat(e.replace(',', '.'));
+        return e.replace(',', '.');
     }
     return e;
 }
