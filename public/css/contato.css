@@ -5,6 +5,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
 }
 
 .contato-wrapper {
@@ -12,6 +13,7 @@
 	height: 90%;
 	display: flex;
 	box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.5);
+	overflow: hidden;
 }
 
 .contato-left {
@@ -25,6 +27,7 @@
 	width: 65%;
 	background-color: #eee;
 	padding: 1rem 3rem 3rem 3rem;
+	overflow: hidden;
 }
 
 .sessao-contato h1 {

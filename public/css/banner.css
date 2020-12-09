@@ -1,9 +1,10 @@
 .banner {
 	width: 100%;
 	height: 100vh;
-	background: url("../image/3.jpg") center no-repeat;
+	background: url("../image/banner.jpg") center no-repeat;
 	background-size: cover;
 	position: relative;
+	overflow: hidden;
 }
 
 .banner::after {
@@ -13,7 +14,6 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: rgba(0, 0, 0, 0.138);
 }
 /* texto, logo, button */
 .console-banner {
@@ -29,8 +29,8 @@
 	font-family: var(--primary);
 	color: rgb(255, 255, 255);
 	text-shadow: 0.2rem 0.9rem rgba(0, 0, 0, 0.871);
-	font-size: 4rem;
-	font-weight: 200;
+	font-size: 5rem;
+	font-weight: 500;
 }
 
 @keyframes moveBanner {
@@ -56,7 +56,7 @@
 	.console-banner h2 {
 		font-weight: 600;
 		font-family: var(--secundary);
-		font-size: 5rem;
+		font-size: 3rem;
 		padding: 1rem;
 	}
 	.console-banner button {
