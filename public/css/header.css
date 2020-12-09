@@ -27,7 +27,7 @@ header {
 .nav .logo {
 	box-shadow: 4px 1px 0px 1px rgba(255, 255, 255, 0.14);
 	border-radius: 72px;
-	background-color: #ffffff13;
+	background-color: #ffffff56;
 }
 
 .nav-list {
@@ -64,19 +64,14 @@ header {
 #nav-btn {
 	font-family: var(--action);
 	display: inline-block;
-	background-color: #fff;
-	color: #313131;
+	background-color: rgba(255, 255, 255, 0.809);
+	color: #000000;
 	padding: 1rem 2rem;
 	border-radius: 2rem;
 }
 
 #nav-btn:hover {
-	background: rgb(14, 255, 217);
-	background: linear-gradient(
-		153deg,
-		rgba(14, 255, 217, 1) 52%,
-		rgba(9, 213, 255, 1) 85%
-	);
+	background: rgb(255, 255, 255);
 }
 
 /* effect when rolling the mouse*/
@@ -119,12 +114,12 @@ header {
 	}
 	/* Smartphone */
 	.mobilebar {
-		width: 50%;
+		width: 100%;
 		height: 100%;
 		background-color: #fff;
 		position: fixed;
 		top: 0;
-		right: -50rem;
+		right: -100rem;
 		transition: all 1s;
 		z-index: 80;
 	}
@@ -190,7 +185,7 @@ header {
 	}
 	/* Show Hamburguer */
 	.show-menu .hamburguer {
-		right: 42%;
+		right: 90%;
 		transition: 2s;
 	}
 
