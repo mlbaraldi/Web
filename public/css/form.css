@@ -1,0 +1,137 @@
+:root {
+	--primary: "Baloo Da 2", serif;
+	--secundary: "Josefin Slab", serif;
+	--action: "Muli", serif;
+	/* color */
+	--fundo: #222222;
+	--prc: #4285f4;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background: var(--fundo);
+}
+h1 {
+	font-family: var(--primary);
+	color: white;
+	font-size: 3rem;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+.container {
+	border-radius: 5px;
+	background-color: var(--fundo);
+	padding: 100px;
+}
+
+form {
+	background: white;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+	height: 180vh;
+	border-radius: 15px;
+	box-shadow: 0 14px 28px var(--prc), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+input[type="checkbox"] {
+	height: 100%;
+	display: block;
+	position: relative;
+	cursor: pointer;
+	float: center;
+	font-size: 6px;
+	left: 32%;
+}
+
+input[type="date"] {
+	font-size: 1rem;
+	width: 30%;
+	cursor: pointer;
+	float: center;
+	align-items: center;
+	border: 1.2px solid rgb(0, 0, 0);
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+form label {
+	font-family: var(--primary);
+	font-size: 1rem;
+	font-weight: 550;
+}
+
+input[type="text"],
+select,
+textarea {
+	width: 50%;
+	align-items: center;
+	border: 1.2px solid rgb(0, 0, 0);
+	border-radius: 4px;
+	box-sizing: border-box;
+	resize: vertical;
+	background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	padding: 12px 20px;
+	cursor: pointer;
+	float: center;
+}
+label {
+	padding: 12px 12px 12px 0;
+	display: inline-block;
+}
+.ordem {
+	float: left;
+	width: 100%;
+	margin-top: 6px;
+}
+
+.total:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+form button {
+	color: #000000;
+	font-size: 1rem;
+	text-transform: uppercase;
+	width: 25%;
+	height: 2.5rem;
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+	letter-spacing: 0.2rem;
+	cursor: pointer;
+	background-color: transparent;
+	border: solid;
+	border-width: 2.3px;
+	border-radius: 9px;
+}
+
+#retorno {
+	font-size: 1rem;
+	font-family: var(--primary);
+}
+a {
+	width: 20%;
+	font-family: var(--action);
+	display: inline-block;
+	background-color: transparent;
+	border: solid;
+	color: #000000;
+	padding: 0.5rem 0.2rem;
+	border-radius: 2rem;
+	text-decoration: none;
+	font-size: 1rem;
+}
+@media screen and (max-width: 600px) {
+	.ordem,
+	input[type="text"] {
+		width: 100%;
+		margin-top: 0;
+	}
+}

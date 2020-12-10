@@ -67,6 +67,7 @@
 		padding: 1rem;
 	}
 	.console-banner button {
+		margin-top: 3rem;
 		cursor: pointer;
 		letter-spacing: 0.2rem;
 		background: transparent;
@@ -75,7 +76,7 @@
 		width: 14rem;
 		height: 6.3rem;
 	}
-	button a {
+	.console-banner button {
 		color: rgb(255, 255, 255);
 		font-family: var(--action);
 		cursor: pointer;
