@@ -1,170 +1,82 @@
 .sessao-planos {
-	background-color: #262626;
 	width: 100%;
-	height: 120vh;
-	overflow: hidden;
-}
-.planos {
-	width: 100%;
-	height: 90%;
-	display: flex;
+	height: 100%;
+	background-color: var(--fundo);
 	text-align: center;
-	justify-content: space-evenly;
-	margin-bottom: 2rem;
-	background-color: #262626;
-}
-.planos-header {
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	overflow: hidden;
+	padding-bottom: 10%;
 }
 
-.planos-header h1 {
-	font-family: var(--primary);
-	color: #ffffff;
-	font-size: 4rem;
-	border-bottom: solid 3px #ffffff;
-	margin-bottom: 3rem;
-	margin-top: 2rem;
-}
-
-.card {
-	width: 28rem;
-	height: 65%;
-	opacity: 1;
+.cardP {
+	background: white;
+	background-size: cover;
+	border-radius: 8px;
+	display: inline-block;
+	height: 500px;
+	margin: 7rem;
+	margin-top: 8rem;
 	position: relative;
+	width: 30%;
 	overflow: hidden;
 }
 
-.card-img-wrapper {
-	width: 100%;
-	height: 100%;
-	background-color: #262626;
-	border-radius: 0.5rem;
-	overflow: hidden;
+.cardP:hover {
+	box-shadow: 0 14px 28px var(--prc), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
 
-.card-img-wrapper img {
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-	border-radius: 0.5rem;
-	opacity: 0.8;
-}
-
-.card-info {
-	position: absolute;
-	bottom: 0;
-	padding: 2rem;
-	text-shadow: 0.3rem 0.2rem 0.3rem rgba(0, 0, 0, 0.6);
-	transition: all 0.3s;
-}
-
-.card-info h2 {
+/* title */
+.cardP0 h3 {
+	font-size: 5rem;
 	font-family: var(--primary);
-	font-size: 4rem;
-	font-weight: 500;
-	color: rgb(255, 255, 255);
-	margin-top: 0;
-	background: rgb(17, 16, 16, 0.953);
-	border-radius: 18px 18px 0px 0px;
-	line-height: 4rem;
-	overflow: hidden;
-}
-
-.card-info h3 {
-	font-family: var(--primary);
-	font-size: 2rem;
-	font-weight: bolder;
-	color: #4285f4;
-	margin-bottom: 1.5rem;
-	background: rgba(17, 16, 16, 0.953);
-	border-radius: 0px 0px 18px 18px;
-}
-
-.card-info p {
-	background: rgba(255, 255, 255, 0.597);
-	border-radius: 18px;
-	font-family: var(--secundary);
-	font-size: 2rem;
-	color: rgb(0, 0, 0);
-	font-weight: 800;
-	width: 100%;
-	margin-bottom: 2rem;
-}
-.p1 cite {
-	font-size: 1.8rem;
-	line-height: 3rem;
-}
-
-.p2 cite {
-	font-size: 2rem;
-	line-height: 5rem;
-}
-.btn {
-	font-family: var(--action);
-	cursor: pointer;
 	font-weight: 600;
-	background: #4285f4;
-	color: rgb(0, 0, 0);
-	border-radius: 0.5rem;
-	border: none;
-	box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
 }
 
-.card-info button {
-	width: 9rem;
-	height: 3.5rem;
+.cardP0 h4 {
+	font-size: 3rem;
+	font-family: var(--secundary);
+	font-weight: 600;
 }
 
-/* responsive */
-@media (max-width: 900px) and (max-height: 800px) {
-	/* sessao-planos */
-	.sessao-planos {
-		height: 1200px;
-	}
+.cardP0 h3,
+h4 {
+	background-color: var(--prc);
+}
 
-	.planos {
-		display: block;
-	}
+.cardP1 h3 {
+	font-size: 5rem;
+	font-family: var(--primary);
+	font-weight: 600;
+}
 
-	.card {
-		width: 40%;
-		left: 30%;
-		height: 45rem;
-		padding: 8px;
-	}
+.cardP1 h4 {
+	font-size: 3rem;
+	font-family: var(--secundary);
+	font-weight: 600;
+}
 
-	.card-info p {
-		font-size: 1.9rem;
-		font-weight: 700;
-		width: 100%;
-		margin-bottom: 1rem;
-	}
+.cardP1 h3,
+h4 {
+	background-color: var(--prc);
 }
-@media (max-width: 758px) {
-	.card {
-		width: 50%;
-	}
+
+/* conteudo */
+.cardP p {
+	font-size: 2.5rem;
+	font-family: var(--secundary);
+	font-weight: 700;
+	margin: 1rem;
+	align-items: center;
 }
-@media (max-width: 610px) {
-	.card {
-		width: 60%;
-		left: 25%;
-		height: 50rem;
-	}
+.cardP li {
+	font-size: 1.7rem;
+	font-family: var(--secundary);
+	font-weight: 700;
 }
-@media (max-width: 460px) {
-	.card {
-		width: 70%;
-		left: 15%;
-		height: 50rem;
-	}
-}
-@media (max-width: 330px) {
-	.card {
-		width: 100%;
-		left: 0%;
+
+@media (max-width: 707px) {
+	.cardP {
+		display: inline-block;
+		height: 550px;
+		margin: 2rem;
+		width: 80%;
 	}
 }

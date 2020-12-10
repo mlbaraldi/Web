@@ -89,21 +89,16 @@ header {
 }
 
 .scrolling-active #nav-btn {
-	background: rgb(14, 255, 217);
-	background: linear-gradient(
-		153deg,
-		rgba(14, 255, 217, 1) 52%,
-		rgba(9, 213, 255, 1) 85%
-	);
+	background: var(--prc);
 	color: rgb(12, 12, 12);
 }
 
 .scrolling-active #nav-btn:hover {
-	background-color: #151515;
+	background-color: #000000;
 }
 
 .scrolling-active .nav-link::after {
-	background-color: #313131;
+	background-color: #000000;
 }
 
 /* smartphone */
@@ -147,7 +142,7 @@ header {
 		transition: color 1s;
 	}
 	.menu-link:hover {
-		color: #0df5f1;
+		color: var(--prc);
 	}
 	.social-media {
 		position: absolute;
@@ -166,7 +161,7 @@ header {
 	}
 
 	.social-media i:hover {
-		color: #15ffc1;
+		color: var(--prc);
 	}
 
 	/* hamburguer */
@@ -216,7 +211,7 @@ header {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		background-color: #44fff6;
+		background-color: var(--prc);
 		color: #000000;
 		font-family: var(--action);
 		opacity: 0;
@@ -225,7 +220,7 @@ header {
 	.hamburguer span::before {
 		content: "";
 		position: absolute;
-		border-right: 0.7rem solid #44ffe0;
+		border-right: 0.7rem solid var(--prc);
 		border-top: 0.5rem solid transparent;
 		border-left: 0.3rem solid transparent;
 		border-bottom: 0.5rem solid transparent;

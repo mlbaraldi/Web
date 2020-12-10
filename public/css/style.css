@@ -6,6 +6,9 @@
 	--primary: "Baloo Da 2", serif;
 	--secundary: "Josefin Slab", serif;
 	--action: "Muli", serif;
+	/* color */
+	--fundo: #222222;
+	--prc: #4285f4;
 }
 
 *,
@@ -27,4 +30,9 @@ html {
 	max-width: 120rem;
 	margin: 0 auto;
 	padding: 0 1.5rem;
+}
+
+.container0 {
+	width: 100%;
+	height: 100%;
 }
