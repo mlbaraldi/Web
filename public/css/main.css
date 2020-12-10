@@ -57,6 +57,13 @@
 	transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
+.card h3 {
+	color: white;
+	font-size: 1.7rem;
+	font-family: var(--secundary);
+	background-color: rgba(0, 0, 0, 0.501);
+}
+
 @media (max-width: 707px) {
 	.card {
 		height: 400px;
