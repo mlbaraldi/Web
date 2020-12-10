@@ -3,6 +3,7 @@
 	height: 100vh;
 	background: url("../image/banner.jpg") center no-repeat;
 	background-size: cover;
+	background-color: var(--fundo);
 	position: relative;
 	overflow: hidden;
 }
