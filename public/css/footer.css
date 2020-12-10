@@ -37,7 +37,7 @@ footer {
 }
 
 .social-list i:hover {
-	color: #44b4ff;
+	color: var(--prc);
 }
 
 #link-topo {
@@ -46,9 +46,7 @@ footer {
 	bottom: 4rem;
 	width: 4rem;
 	height: 4rem;
-	background: #ffffff;
-	background: -webkit-linear-gradient(to right, #ffffff, #ffffff);
-	background: linear-gradient(to left, #00e1ff, #00ff9d);
+	background: var(--prc);
 	display: flex;
 	justify-content: center;
 	align-items: center;

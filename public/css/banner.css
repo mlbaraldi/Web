@@ -19,17 +19,22 @@
 .console-banner {
 	max-height: 100vh;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	position: absolute;
 	text-align: center;
-	top: 50%;
+	top: 35%;
 	animation: moveBanner 2s 0.9s forwards;
 }
-.console-banner h2 {
+.console-banner h1 {
 	font-family: var(--primary);
 	color: rgb(255, 255, 255);
-	text-shadow: 0.2rem 0.9rem rgba(0, 0, 0, 0.871);
-	font-size: 5rem;
+	font-size: 9rem;
+	font-weight: 600;
+}
+.console-banner h2 {
+	font-family: var(--segundary);
+	color: rgb(255, 255, 255);
+	font-size: 4rem;
 	font-weight: 500;
 }
 
@@ -42,6 +47,8 @@
 		opacity: 1;
 	}
 }
+
+/* Mobile */
 @media (max-width: 900px) {
 	.console-banner {
 		top: 30%;
@@ -50,8 +57,7 @@
 		font-family: var(--primary);
 		color: rgb(255, 255, 255);
 		font-size: 7rem;
-		font-weight: 700;
-		text-shadow: 0rem 0rem 1rem rgba(8, 252, 207, 0.871);
+		font-weight: 600;
 	}
 	.console-banner h2 {
 		font-weight: 600;
@@ -62,29 +68,23 @@
 	.console-banner button {
 		cursor: pointer;
 		letter-spacing: 0.2rem;
-		background: #11f37e;
-		background: -webkit-linear-gradient(to right, #2cf3b7, #00d0ff);
-		background: linear-gradient(to left, #00eeff, #00ffb3);
-		border-radius: 0.5rem;
-		border: none;
-		width: 15rem;
-		height: 5.5rem;
-		box-shadow: 0 0.1rem 0.8rem rgba(0, 0, 0, 0.4);
+		background: transparent;
+		border-radius: 1rem;
+		border: solid white;
+		width: 14rem;
+		height: 6.3rem;
 	}
 	button a {
-		color: black;
+		color: rgb(255, 255, 255);
 		font-family: var(--action);
 		cursor: pointer;
-		font-size: 2rem;
+		font-size: 1.7rem;
 		text-decoration: none;
 		font-weight: 600;
 	}
 }
 
 @media (min-width: 900px) {
-	.console-banner h1 {
-		display: none;
-	}
 	.console-banner button {
 		display: none;
 	}
