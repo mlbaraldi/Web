@@ -31,7 +31,9 @@ form.addEventListener('submit', (e: Event) => {
         p.innerText = "Por favor, preencha o campo altura corretamente"
         return
     }
-    
+    if(altura.value > 100) {
+        altura.value /= 100
+    }
     //IMC através de programação funcional
     let imc = calcIMC(parseFloat(commaToDot(peso.value)), parseFloat(commaToDot(altura.value)))
     
